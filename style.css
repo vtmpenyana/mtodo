@@ -1,0 +1,59 @@
+html, body {
+	height: 100%;
+}
+* {
+	font-family: 'Baloo Paaji 2', cursive;
+	margin: 0px;
+	transition: all 0.5s ease;
+
+}
+
+h3 {
+	margin:5px;
+}
+
+
+input {
+	border-radius: 5px;
+	padding: 5px;
+}
+
+button {
+	margin: 5px;
+}
+
+.myContainer {
+	display: grid;
+	justify-items: center;
+}
+
+footer {
+	padding-top: 20px;
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	transition: all 5s ease;
+	cursor: pointer;
+	font-size: 2rem;
+	border-bottom: 1px dotted #0099ff;
+}
+
+#todos {
+	border: 1px solid #0099ff;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.important {
+	font-weight: 700;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.selected {
+	background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
