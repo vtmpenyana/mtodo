@@ -33,6 +33,7 @@ footer {
 }
 
 li {
+	border-radius: 5px;
 	list-style: none;
 	transition: all 5s ease;
 	cursor: pointer;
