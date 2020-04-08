@@ -1,21 +1,19 @@
-var addButton = document.getElementById("add");
-var todoList = document.getElementById("todos");
-var h2 = document.getElementById('empty');
-var input = document.getElementById("input");
-var deleteBtn = document.getElementById("delete");
-var importantBtn = document.getElementById("important");
+const addButton = document.getElementById("add");
+const todoList = document.getElementById("todos");
+const h2 = document.getElementById('empty');
+const input = document.getElementById("input");
+const deleteBtn = document.getElementById("delete");
 
-var selectedTodo;
+let selectedTodo;
 
-function doneSelect(event){
+const doneSelect = (event) => {
 	event.target.classList.toggle("done");
 	event.target.classList.toggle("selected");
 	selectedTodo = event.target;
-	console.log("Worked!");
 }
 
 //create a todo item
-function createTodo(){
+const createTodo = () => {
 	if(input.value.length > 0){
 		var todo = document.createElement("li");
 		//adding content to the new item
@@ -36,7 +34,7 @@ function createTodo(){
 
 
 //remove todo
-function deleteTodo(){
+const deleteTodo() => {
 	if(selectedTodo != undefined){
 		todoList.removeChild(selectedTodo);
 		selectedTodo = undefined;
