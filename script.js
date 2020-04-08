@@ -34,7 +34,7 @@ const createTodo = () => {
 
 
 //remove todo
-const deleteTodo() => {
+const deleteTodo = () => {
 	if(selectedTodo != undefined){
 		todoList.removeChild(selectedTodo);
 		selectedTodo = undefined;
