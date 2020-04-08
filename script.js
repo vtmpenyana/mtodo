@@ -3,6 +3,7 @@ const todoList = document.getElementById("todos");
 const h2 = document.getElementById('empty');
 const input = document.getElementById("input");
 const deleteBtn = document.getElementById("delete");
+const appBody = document.querySelector("body");
 
 let selectedTodo;
 
@@ -43,10 +44,16 @@ const deleteTodo = () => {
 	selectedTodo = undefined;
 }
 
-input.addEventListener("keypress", function(event){
+input.addEventListener("keypress",(event) => {
 	if(event.which === 13){
 		createTodo();
 	}
 })
 addButton.addEventListener("click", createTodo);
 deleteBtn.addEventListener("click", deleteTodo);
+
+appBody.addEventListener("keypress", (event) => {
+	if(event.key === "d"){
+		deleteTodo();
+	}
+});
